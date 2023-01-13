@@ -10,7 +10,7 @@ bot_token = os.environ.get('BOT_TOKEN')
 imgbb_api_key = os.environ.get('API_KEY')
 
 # Create a new TelegramClient
-client = TelegramClient(bot_token, api_id, api_hash)
+client = TelegramClient(bot_token, api_id, api_hash).start(bot_token=bot_token)
 
 
 @client.on(events.NewMessage(pattern='/start'))
